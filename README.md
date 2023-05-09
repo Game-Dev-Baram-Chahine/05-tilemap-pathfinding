@@ -1,28 +1,15 @@
-# Unity week 5: Two-dimensional scene-building and path-finding
+# tilemap pathfinding and cave generation
 
-A project with step-by-step scenes illustrating how to construct a 2D scene using tilemaps,
-and how to do path-finding using the BFS algorithm.
+## [Link To The Game On 'itch.io'](https://gamedevbc.itch.io/tiles-and-cavegen)
 
-Text explanations are available 
-[here](https://github.com/gamedev-at-ariel/gamedev-5782) in folder 07.
+## You can choose between two scenes:
+* State: we changed the state machine so it will have a hider function, so it will hide the enemy when he is far.
+* Cave Generator: we implemented a BFS search algorythm that checks if the given map is valid for playing, and the user can change some of the parameters that generates the map.
 
-## Cloning
-To clone the project, you may need to install git lfs first:
+![](https://github.com/Game-Dev-Baram-Chahine/05-tilemap-pathfinding/blob/main/example.gif)
 
-    git lfs install 
-
-
-## Credits
-
-Graphics:
-* [Ultima 4 Graphics](https://github.com/jahshuwaa/u4graphics) by Joshua Steele.
-
-Online course:
-* [Unity 2D](https://www.udemy.com/course/unitycourse/learn/lecture/10246496), a Udemy course by Gamedev.tv.
-* [Unity RPG](https://www.gamedev.tv/p/unity-rpg/?product_id=1503859&coupon_code=JOINUS).
-
-Procedural generation:
-* [Habrador - Unity Programming Patterns](https://github.com/Habrador/Unity-Programming-Patterns#7-double-buffer)
-
-Programming:
-* Erel Segal-Halevi
+Scripts:
+* [BFS](https://github.com/Game-Dev-Baram-Chahine/05-tilemap-pathfinding/blob/37ffb6019b90f1b16878c504873050c9ff1d92bf/Assets/Scripts/0-bfs/BFS.cs#LL55C23-L55C41)
+* [Tilemap Cave Generator](https://github.com/Game-Dev-Baram-Chahine/05-tilemap-pathfinding/blob/main/Assets/Scripts/4-generation/TilemapCaveGenerator.cs)
+* [Scene Selector](https://github.com/Game-Dev-Baram-Chahine/05-tilemap-pathfinding/blob/main/Assets/Scripts/5-gameMan/SceneSelector.cs)
+* [Enemy Controller](https://github.com/Game-Dev-Baram-Chahine/05-tilemap-pathfinding/blob/main/Assets/Scripts/3-enemies/EnemyController3.cs)
