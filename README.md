@@ -2,7 +2,7 @@
 
 ## [Link To The Game On 'itch.io'](https://gamedevbc.itch.io/tiles-and-cavegen)
 
-## You can choose between two scenes:
+## You can choose between two scenes
 * State: we changed the state machine so it will have a hider function, so it will hide the enemy when he is far.
 * Cave Generator: we implemented a BFS search algorythm that checks if the given map is valid for playing, and the user can change some of the parameters that generates the map.
 
