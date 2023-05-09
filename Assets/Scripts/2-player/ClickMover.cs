@@ -8,11 +8,13 @@ using UnityEngine.InputSystem;
  * This component allows the player to move to a point in the screen by clicking it. 
  * Uses BFS to find the shortest path from the current location to the new location.
  */
-public class ClickMover: TargetMover {
+public class ClickMover : TargetMover
+{
 
     [SerializeField] InputAction moveAction;
 
-    void OnValidate() {
+    void OnValidate()
+    {
         // Provide default bindings for the input actions.
         // Based on answer by DMGregory: https://gamedev.stackexchange.com/a/205345/18261
         if (moveAction == null)
@@ -21,16 +23,20 @@ public class ClickMover: TargetMover {
             moveAction.AddBinding("<Mouse>/leftButton");
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         moveAction.Enable();
     }
 
-    private void OnDisable() {
+    private void OnDisable()
+    {
         moveAction.Disable();
     }
 
-    void Update() {
-        if (moveAction.WasPerformedThisFrame()) {
+    void Update()
+    {
+        if (moveAction.WasPerformedThisFrame())
+        {
             Vector3 newTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             SetTarget(newTarget);
         }
